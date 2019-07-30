@@ -36,27 +36,27 @@ $("#buttons").hide();
     var index = Math.floor((Math.random() * 2));
     if(area == 0){
         var mon = stage[index];
-     document.getElementById("events").style.background="url('http://www.cs.csub.edu/~naton/notes/rpg/images/field.png')";   
+     document.getElementById("events").style.background="url('images/field.png')";   
     }
     else if(area == 1){
-     document.getElementById("events").style.background="url('http://www.cs.csub.edu/~naton/notes/rpg/images/shore.png')";   
+     document.getElementById("events").style.background="url('images/shore.png')";   
         var mon = stage1[index];
     }
     else if(area == 2){
-     document.getElementById("events").style.background="url('http://www.cs.csub.edu/~naton/notes/rpg/images/outfortress.png')";   
+     document.getElementById("events").style.background="url('images/outfortress.png')";   
         var mon = stage2[index];
     }
     else if(area == 3){
-     document.getElementById("events").style.background="url('http://www.cs.csub.edu/~naton/notes/rpg/images/fortress.png')";   
+     document.getElementById("events").style.background="url('images/fortress.png')";   
         var mon = stage3[index];
     }
     else if(area == 4){
-     document.getElementById("events").style.background="url('http://www.cs.csub.edu/~naton/notes/rpg/images/infortress.png')";   
+     document.getElementById("events").style.background="url('images/infortress.png')";   
         var mon = midboss;
         talking();
     }
     else{
-     document.getElementById("events").style.background="url('http://www.cs.csub.edu/~naton/notes/rpg/images/boss.png')";   
+     document.getElementById("events").style.background="url('images/boss.png')";   
         var mon = boss;
         talking();
     }
@@ -126,23 +126,7 @@ function foo(){
         $("#plusS").show();
         $("#plusH").show();
 
-        /*
-        $("#plusS").click(function(){
-            stam++;
-            health = stam *10;
-            document.getElementById("health").innerHTML ="hp "+ health+ "/" +stam*10;
-            $("#skillpoints").text(skillP);
-            $("#stam").html(stam);
-            return;
-        });
-        $("#plusH").click(function(){
-            hit++;
-            $("#skillpoints").text(skillP);
-            $("#hit").html(hit);
-            return;
-        });
-        */
-           // skillP--;
+      
     }
 }
 
@@ -150,10 +134,7 @@ function foo(){
 
 function lvlUp(){
     document.getElementById("stuff").innerHTML= "<br><b>You've leveld up!</b>";
-     /* $("#stuff").append( 
-        "you won! <br> <button onclick='fight();'> continue?</button>"
-        +"<button onclick='town();'> return to town? </button>"); 
-       */             
+              
     lvl ++;
     exp -= reqExp;
     reqExp += reqExp/2;
