@@ -45,7 +45,7 @@ var stage0= [slime,evilCow,evilCat];
 
 function field(){
     //set action box
-    document.getElementById("events").style.backgroundImage="url('http://www.cs.csub.edu/~naton/notes/rpg/images/forest.png')";
+    document.getElementById("events").style.backgroundImage="url('images/forest.png')";
     document.getElementById("buttons").innerHTML = 
         "<h2>Field</h2>"      
         +"<button href='#' id='attack' onclick='fight(MHp);'>attack</button>"
