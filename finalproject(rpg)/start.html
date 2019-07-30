@@ -10,12 +10,12 @@
             <button id="btn2">Continue</button>
         <script>
 var i = 0;
-var text =["<img src='http://www.cs.csub.edu/~naton/notes/rpg/images/first.png'></img><br>Another fight.",
-"<img src ='http://www.cs.csub.edu/~naton/notes/rpg/images/second.png'></img><br>But this isn't your first. None the less you took quite a beating just now", 
+var text =["<img src='images/first.png'></img><br>Another fight.",
+"<img src ='images/second.png'></img><br>But this isn't your first. None the less you took quite a beating just now", 
 "Your head hurts pretty bad this time. You gently feel your head.",
-    "<img src = 'http://www.cs.csub.edu/~naton/notes/rpg/images/bloody%20hand2.png'> </img> <br>Looks like you need medical help.",
-"<img src='http://www.cs.csub.edu/~naton/notes/rpg/images/third.png'></img><br>Its night but the moon is bright. Luck seems to me on your side. You see the orange glow of a town up ahead. You stumble your way through the forest towards it.",
-"<img src ='http://www.cs.csub.edu/~naton/notes/rpg/images/third2.png'></img><br>Though it seems you lost quite a bit of blood and take a tumble.","A tree happens to be in the path and you pass out."];
+    "<img src = 'images/bloody%20hand2.png'> </img> <br>Looks like you need medical help.",
+"<img src='images/third.png'></img><br>Its night but the moon is bright. Luck seems to me on your side. You see the orange glow of a town up ahead. You stumble your way through the forest towards it.",
+"<img src ='images/third2.png'></img><br>Though it seems you lost quite a bit of blood and take a tumble.","A tree happens to be in the path and you pass out."];
 $(document).ready(function(){
  //   $("#poo").hide();
  //   $("#btn2").hide();
@@ -28,7 +28,7 @@ $(document).ready(function(){
     });
     $("#btn2").click(function(){
         if(i == 7)
-            window.location.href = "http://www.cs.csub.edu/~naton/notes/rpg/gam.html";
+            window.location.href = "gam.html";
         $("#poo").html(text[i]+"<br>");
         i++;
 
