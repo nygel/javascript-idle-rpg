@@ -1,0 +1,112 @@
+div #talk{
+    border: solid 5px darkblue;
+    margin: auto;
+    clear:both;
+    width: 700px;
+    height: 500px;
+    border-radius: 10px;
+    background-size: 100% 100%;
+}
+div #dialoge{
+    border: solid 3px darkblue;
+    color: white;
+    padding: 5px;
+    position: absolute;
+    width: 692px;
+    height: 100px;
+    top: 630px;
+    border-radius: 10px;
+    background: lightblue;
+}
+div#events{
+    border-radius: 10px;
+    width:500px;
+    height:300px;
+    float:left;
+    border: solid darkblue 5px;
+    margin: 5px;
+    display:block;
+}
+div#avater{
+    border-radius: 10px;
+    width:200px;
+    height:200px;
+    float:left;
+    border: solid darkblue 5px;
+    margin: 5px;
+    color: white;
+    background-image: url("http://www.cs.csub.edu/~naton/notes/rpg/images/herop1.png ");
+}
+div#map{
+    border-radius: 10px;
+    width:530px;
+    height:300px;
+    float:right;
+    border: solid darkgray 5px;
+    margin:5px;
+    background-image: url("http://www.cs.csub.edu/~naton/notes/rpg/images/map.png");
+}
+div#stuff{
+    border-radius: 10px;
+    margin: 5px;
+    width:400px;
+    height:250px;
+    float:left;
+    border: solid darkblue 5px;
+    background: #a3e0f5;
+    color: white;
+    text-shadow: 2px 2px gray;
+    display:inline;
+overflow: auto;
+}
+div#buttons{
+    border-radius: 10px;
+    margin: 5px;
+    width:200px;
+    height:140px;
+    float:left;
+    border: solid darkblue 5px;
+    clear: both;
+}
+div#stats{
+    border-radius: 10px;
+    margin: 5px;
+    width:200px;
+    height:300px;
+    float:right;
+    border: solid darkgray 5px;
+}
+div#bag{
+    border-radius: 10px;
+    margin: 5px;
+    text-align: right;
+    border:solid darkgray 5px;
+    float:right;
+    padding: 10px;
+    margin: 5px;
+}
+ul{
+   float: left; 
+}
+ul li{
+   list-style: none;
+    text-align: left;
+    list-style-type: none;
+    text-decoration: none;
+}
+button{
+    border: solid 3px #398ec6;
+    background:#9cc6e2;
+    padding: 2px;
+    text-size: 20px;
+    margin: 3px;
+}
+div#poo{
+border: double 2px darkblue;
+margin:auto;
+padding:10px;
+width: 900px;
+height: 300px;
+background: #005ce6;
+color: white;
+}

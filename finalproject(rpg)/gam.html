@@ -1,0 +1,128 @@
+<!doctype HTML>
+<HTML>
+    <head>
+        <link href="RPG.css" type="text/css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type='text/javascript'>
+        var stam = 10;
+var health = stam * 10;
+var def =0;
+var hit = 10;
+var gold = 30;
+var exp = 0;
+var reqExp = 20;
+var lvl = 1;
+var dead = false;
+var skillP = 0;
+var area = 0;
+var items = [0,0,0,0];
+var equip =[];
+var events = [false,false,false];
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
+        <script type='text/javascript' src='lib.js'></script>
+        <script type='text/javascript' src='town.js'></script>
+        <script type='text/javascript' src='fight2.js'></script>
+        <script type='text/javascript' src='talk.js'></script>
+        <title> Bare Bones RPG</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Bare Bones</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><button id = 'maps' >Map</button></li>
+                    <li><button id = 'bagb' >Bag</button></li>
+                    <li><button id = 'statb' >Stats</button></li>
+                </ul>
+            </div>
+        </nav>
+        <div class ="wrapper">
+            <div id=talk>
+                <div id= pic>
+                </div>
+                <div id= dialoge>
+                </div>
+            </div>
+        </div>
+        <div id= gam>
+            <div id ="map">
+            </div>
+            <div id = "stats">
+                <ul>
+                    <li> <h3 >Lvl: <a href='#' id="lvl"></a> </h3></li>
+                    <li> Stam: <b id='stam'></b><button id= "plusS" onclick='foo();'> + </button></li>
+                    <li> Hit: <b id="hit"></b><button id= "plusH" onclick='foo();'> + </button></li>
+                    <li> Def: <b id="def"></b></li>
+                    <li><hr></li>
+                    <li> exp: <p id="exp"></p></li>
+                    <li> skill points : <p id="skillpoints"></p></li>
+                </ul>
+            </div>
+            <div id = "bag">
+                <ul>
+                    <li> <h3 >consumables<h3>
+                                 <h6 id= "1"></h6><button id="p1" onclick="useP(50,0,'low potion');">Use</button><br> 
+                                 <h6 id= "2"></h6><button id="p2" onclick="useP(100,1,'medium potion');">Use</button><br> 
+                                 <h6 id= "3"></h6><button id="p3" onclick="useP(500,2,'high potion');">Use</button><br> 
+                                 <h6 id= "4"></h6><button id="p4" onclick="useP(stam*10,3,'complete potion');">Use</button><br> 
+                                
+                    </li>
+                    <li><hr></li>
+                    <li> <h3 >equip <p id= "equipment"></p> </h3></li>
+                    <li><hr></li>
+                    <li>gold <p id= "gold"></p></li>
+            </div>
+            <div id="events"></div>
+            <div id="avater">
+                name: <h4 id="name">John</h4>
+                hp:<p id="health"></p>
+                <p id="hero"></p>
+            </div>
+            <br>
+            <br>
+            <div id="buttons"></div>
+            <div id="stuff"></div>
+        </div>
+    <script>
+$(document).ready(function(){
+    talking();
+    $("#plusS").hide();
+    $("#plusH").hide();
+    $("#p1").hide();
+    $("#p2").hide();
+    $("#p3").hide();
+    $("#p4").hide();
+    $("#stam").text(stam);
+    $("#hit").text( hit);
+    $("#def").text( def);
+    $("#lvl").text(lvl);
+    $("#gold").text(gold);
+    $("#exp").text(exp+"/"+reqExp);
+    $("#skillpoints").text(skillP);
+    $("#health").text(health + "/" + health);
+    $("#map").hide();
+    $("#stats").hide();
+    $("#bag").hide();
+    town();
+    $("#maps").click(function(){
+        $("#map").toggle();
+        if($("#map").is(":visible()")){
+            $("#bag").hide();
+            $("#stats").hide();
+        }
+    });
+    $("#bagb").click(function(){
+        $("#bag").toggle();
+    });
+    $("#statb").click(function(){
+        $("#stats").toggle();
+    });
+});
+    </script>
+</body>
+</HTML>

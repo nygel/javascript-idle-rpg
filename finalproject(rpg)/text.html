@@ -1,0 +1,91 @@
+<!doctype HTML>
+<HTML>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+    <body>
+        money<div id='asect'> money </div>
+        bag amount<div id='b'>bag</div>
+        bag<div id='bsect'>
+        </div>
+        store<div id='csect'>store</div>
+        health<div id='poo'>health</div>
+        <script>
+
+/*function buy(obj, arr) {
+
+loop traverse arr
+find where obj.innerHTML has arr[i].name
+
+arr[i] is the obj to put in bag
+}
+function buy(obj) {
+test1.buy();
+}*/
+var z = document.getElementById('poo');
+var k = 10;
+var bag =[0,0,0];
+var index =0;
+var money = 100;
+$("#asect").text(money);
+z.innerHTML = k;
+var test1 = new foo("pit", 10,10);
+var test2 = new foo("pat", 20,20);
+var test3 = new foo("pot", 30,30);
+var arr = ["<button id = 'pitS'>pit 10g</button>",
+    "<button id= 'patS'>pat 20g</button>",
+    "<button id= 'potS'>pot 30g</button>"];
+$("#csect").html(arr);
+function foo(name,effect,cost){
+    this.name=name;
+    this.effect=effect;
+    this.cost=cost;
+    this.buff =  function (idd) {
+        k +=effect;//health
+        z.innerHTML = k;//display health
+        bag[idd]--;
+        alert(bag[idd]);
+        if(bag[idd] == 0 && idd == 0){$("#t1").hide();}
+        if(bag[idd] == 0 && idd == 1){$("#t2").hide();}
+        if(bag[idd] == 0 && idd == 2){$("#t3").hide();}
+    $("#b").text(bag);
+    };
+    if(name == 'pit'){
+    this.use = '<button onclick= test1.buff(0); id = t1 >'+ name +'</button>';
+    }
+    if(name == 'pat'){
+    this.use = '<button onclick= test2.buff(1); id = t2>'+ name +'</button>';
+    }
+    if(name == 'pot'){
+    this.use = '<button onclick= test3.buff(2); id = t3>'+ name +'</button>';
+    }
+    // this.buff();
+    //  this.buy();
+}
+$("#pitS").click(function(){
+    money -= 10;
+    bag[0]++;
+    if(bag[0] == 1)
+        $("#bsect").append(test1.use);
+    $("#b").text(bag);
+    $("#asect").text(money);
+});
+$("#patS").click(function(){
+    money -= 20;
+    bag[1]++;
+    if(bag[1] == 1)
+        $("#bsect").append(test2.use);
+    $("#b").text(bag);
+    $("#asect").text(money);
+});
+$("#potS").click(function(){
+    money -= 30;
+    bag[2]++;
+    if(bag[2] == 1)
+        $("#bsect").append(test3.use);
+    $("#b").text(bag);
+    $("#asect").text(money);
+});
+        </script>
+</body>
+</HTML>
